@@ -24,20 +24,21 @@ void stack_push(node** root, node* item) {
   
 }
 
-node* stack_pop(node* root) {
+node* stack_pop(node** root) {
 
-  node* aux = root;
+  node* aux = *root;
 
-  if(aux->next) {
+  if(aux) {
 
-    root = aux->next;
+    *root = aux->next;
+    return aux;
 
-  } else {
+  } 
+
+  else {
 
     return NULL;
-    
-  }  
 
-  return aux;
+  }
 
 }

@@ -15,6 +15,9 @@ void main() {
 
   int i;
 
+  printf("\n\nStack example. Last in, First out.\n\n");
+  printf("Pushing 10 elements ...\n");
+
   print_structure(stack);
 
   for(i = 0; i < 10; i++) {
@@ -22,6 +25,16 @@ void main() {
     aux = node_new(i);
    
     stack_push(&stack, aux);
+  
+    print_structure(stack);
+    
+  }
+
+  printf("\nPoping 10 elements ...\n");
+
+  for(i = 0; i < 10; i++) {
+   
+    aux = stack_pop(&stack);
   
     print_structure(stack);
     
