@@ -14,13 +14,13 @@ node* stack_create() {
 
 }  
 
-void stack_push(node* root, node* item) {
+void stack_push(node** root, node* item) {
   
-  node* aux = root;
-  
-  root = item;
+  node* aux = *root;
 
-  item->next = aux; 
+  *root = item;
+
+  item->next = aux;
   
 }
 

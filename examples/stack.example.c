@@ -13,20 +13,18 @@ void main() {
   node* stack = stack_create();
   node* aux;
 
-  int i;  
+  int i;
+
+  print_structure(stack);
 
   for(i = 0; i < 10; i++) {
     
     aux = node_new(i);
-    
-    if(stack == NULL) {
-      printf("NULL\n");
-    }
    
-    print_structure(stack);
-
-    stack_push(stack, aux);   
+    stack_push(&stack, aux);
   
+    print_structure(stack);
+    
   }
 
 }

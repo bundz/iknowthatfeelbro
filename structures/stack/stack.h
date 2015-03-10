@@ -3,7 +3,7 @@
 #include "../../utils/node.h"
 
 node* stack_create();
-void stack_push(node* root, node* item);
+void stack_push(node** root, node* item);
 node* stack_pop();
 
 #endif
