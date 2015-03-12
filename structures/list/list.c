@@ -57,8 +57,17 @@ node* list_get(node** root, int pos) {
 
 void list_remove(node** root, int pos) {
 
-  node* aux = list_get(root, pos - 1);
+  node* aux;
   node* aux2;
+
+  if(pos == 0 && *root != NULL ) {
+    aux = *root;
+    *root = aux->next;
+    free(aux);
+    return;
+  }  
+
+  aux = list_get(root, pos - 1);
 
   if(aux != NULL && aux->next != NULL) {
     aux2 = aux->next;

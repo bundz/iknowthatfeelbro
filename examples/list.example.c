@@ -30,14 +30,36 @@ void main() {
     
   }
 
-  printf("\nRemoving 10 elements ...\n");
+  printf("\nGetting 10 elements ...\n");
 
-  for(i = 0; i < 10; i++) {
-   
-    list_remove(&list, 0);
-  
-    print_structure(list);
+   for(i = 0; i < 10; i++) {
     
+    aux = list_get(&list, i);
+   
+    printf("Element with index: %d has value: %d\n", i, aux->value);
+   
   }
+
+  printf("\nRemoving 5 elements ...\n");
+
+  printf("Removing index 7 element ...\n"); 
+  list_remove(&list, 7); 
+  print_structure(list);
+
+  printf("Removing index 2 element ...\n"); 
+  list_remove(&list, 2); 
+  print_structure(list);
+
+  printf("Removing index 5 element ...\n"); 
+  list_remove(&list, 5); 
+  print_structure(list);
+
+  printf("Removing index 3 element ...\n"); 
+  list_remove(&list, 3); 
+  print_structure(list);
+
+  printf("Removing index 0 element ...\n"); 
+  list_remove(&list, 3); 
+  print_structure(list);
 
 }
